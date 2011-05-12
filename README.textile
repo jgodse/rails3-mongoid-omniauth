@@ -188,7 +188,7 @@ For Twitter:
 
 <pre>
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :twitter, 'KEY', 'SECRET'
+  provider :twitter, 'TWITTER_KEY', 'TWITTER_SECRET'
 end
 </pre>
 
@@ -204,6 +204,24 @@ For others, see "Module: OmniAuth::Strategies":http://intridea.github.com/omniau
 
 h4. Keep Your API Keys Secret
 
+Use environment variables for your API keys. This is a good practice because it lets  you rotate your keys every so often
+as per good security practices, without changing the code base. Once you have your key/secret pair (e.g. xxxxx and yyyyy)
+
+On Heroku:
+
+> heroku config:add TWITTER_KEY=xxxxx TWITTER_SECRET=yyyyy
+
+On Linux/bash
+
+$ export TWITTER_KEY=xxxxx 
+$ export TWITTER_SECRET=yyyyy
+
+On Windows
+
+C:> set TWITTER_KEY=xxxxx
+C:> set TWITTER_SECRET=yyyyy
+
+If you use environment variables, you don't have to use this below. 
 Make sure that the file *config/initializers/omniauth.rb* will not be added to your GitHub repository. If you've created a public repository and you commit the file with your API Keys, anyone who browses your repo will be able to obtain your API keys and masquerade as your application.
 
 Modify the *.gitignore* file before commiting the file with your API keys. Add:
