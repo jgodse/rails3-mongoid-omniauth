@@ -15,5 +15,6 @@ test:
   database: rails3_mongoid_omniauth_test
 
 # set these environment variables on your prod server
+
 production:
-  uri: <%= ENV['MONGHQ_URL'] %>
+  uri: <%= ENV['MONGOHQ_URL'] %>
