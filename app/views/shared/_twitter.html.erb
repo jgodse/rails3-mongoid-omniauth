@@ -1,8 +1,44 @@
-<div >
-<h2>Twitter</h2>
 <% userinfo=JSON.parse(@user.user_info) %>
+<% userhash=userinfo["user_hash"]
 
-<% userinfo["user_hash"].each do |info| %>
-	<p><%= info.to_s %></p><br />
+	<style type="text/css">
+		.twitterbody {
+			background-color: <% userhash["profile_background_color"] || "white"%>
+			<% if userhash["profile_use_background_image"] %>
+				background-image: url(<%= userhash["profile_background_image_url"] %>);
+			<% end %>
+			background-position: 50% 50%;
+			<% if userhash["profile_background_tile"]
+				background-repeat: repeat;
+			<% else %>
+				background-repeat: no-repeat;
+			<% end %>
+		}
+		.twitterbody a:link {
+			color: :<%= userhash["profile_link_color"] || "blue" %>
+		}
+	</style>
 <% end %>
+
+<div class="twitterbody">
+	<h2>Twitter</h2>
+
+
+	<% userhash.each do |info| %>
+		<p><%= info.to_s %></p><br />
+	<% end %>
+
+	<% if !userhash["profile_image_url"].blank? %>
+		<%= image_tag userhash["profile_image_url"] %>
+	<% %>
+	
+	<p>Screen Name: <%= userhash["screen_name"] %></p>
+	<p>Name: <%= userhash["name"] %></p>
+	<p>Followers: <%= userhash["followers_count"] %></p>
+	<p>Friends: <%= userhash["friends_count"] %></p>
+	<p>Location: <%= userhash["location"] if userhash["location"] %></p>
+	<p%>Time Zone: <%= userhash["time_zone"] if userhash["time_zone"] %></p>
+	
+	<p></p>
 </div>
+<div id="sidebar" color=<%= %>
