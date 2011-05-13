@@ -5,11 +5,11 @@
 <p>Provider: <%= @user.provider %></p>
 
 
-<% if @user.provider="twitter" %>
+<% if @user.provider=="twitter" %>
 	<%= render 'shared/twitter' %>
 <% end %>
 
-<% if @user.provider="facebook" %>
+<% if @user.provider=="facebook" %>
 	<%= render 'shared/facebook' %>
 <% end %>
 
