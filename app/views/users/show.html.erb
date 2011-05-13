@@ -4,9 +4,3 @@
 <p>Email: <%= @user.email if @user.email %></p>
 <p>Info: <%= @user.user_info if @user.user_info %></p>
 
-<% #if @user.user_info %>
-	<% #@user.user_info.each do |info_element| %>
-		<h3> ELEMENT </h3>
-		<p><%= #info_element if @user.user_info %></p>
-	<% #end %>
-<% #end %>
