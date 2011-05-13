@@ -7,7 +7,15 @@
   </li>
 <% else %>
   <li>
-  <%= link_to('Login', signin_path)  %>  
-  <%= link_to('Login With Twitter', '/auth/twitter') %>
+  <!--%= link_to('Login', signin_path)  % -->  
+
+  <% if !ENV['TWITTER_KEY'].blank? %>
+	<%= link_to('Login With Twitter', '/auth/twitter') %> |
+  <% end %>
+  
+  <% if !ENV['FACEBOOK_APP_ID'].blank? %>
+	<%= link_to('Login With Facebook', '/auth/facebook') %>
+  <% end %>
+  
   </li>
 <% end %>

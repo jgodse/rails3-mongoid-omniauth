@@ -196,7 +196,7 @@ For Facebook:
 
 <pre>
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :facebook, 'KEY', 'SECRET'
+  provider :facebook, 'FACEBOOK_APP_ID', 'FACEBOOK_APP_SECRET'
 end
 </pre>
 
@@ -205,7 +205,9 @@ For others, see "Module: OmniAuth::Strategies":http://intridea.github.com/omniau
 h4. Keep Your API Keys Secret
 
 Use environment variables for your API keys. This is a good practice because it lets  you rotate your keys every so often
-as per good security practices, without changing the code base. Once you have your key/secret pair (e.g. xxxxx and yyyyy)
+as per good security practices, without changing the code base. Once you have your key/secret pair (e.g. xxxxx and yyyyy). 
+
+Here is what you do for Twitter. 
 
 On Heroku:
 

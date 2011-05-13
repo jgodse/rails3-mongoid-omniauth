@@ -9,6 +9,10 @@
 	<%= render 'shared/twitter' %>
 <% end %>
 
+<% if @user.provider="facebook" %>
+	<%= render 'shared/facebook' %>
+<% end %>
+
 <p>For the raw user_info, look at the page source below this line</p>
 <div style="display:none">
 <%= @user.user_info if @user.user_info %>

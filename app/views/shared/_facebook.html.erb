@@ -1,0 +1,13 @@
+<% userinfo=JSON.parse(@user.user_info) %>
+<% userhash=userinfo["user_hash"] %>
+
+
+
+<div class="facebookbody">
+	<h2>Facebook</h2>
+	
+	<% userhash.each do |element| %>
+		<p><%= element.to_s %><p><br />
+	<% end %>
+
+</div>
