@@ -2,7 +2,7 @@
 <h2>Twitter</h2>
 <% userinfo=JSON.parse(@user.user_info) %>
 
-<% userinfo.each do |info| %>
+<% userinfo.user_hash.each do |info| %>
 	<p><%= info.to_s %></p><br />
 <% end %>
 </div>
