@@ -23,11 +23,6 @@
 <div class="twitterbody">
 	<h2>Twitter</h2>
 
-
-	<% userhash.each do |info| %>
-		<p><%= info.to_s %></p><br />
-	<% end %>
-
 	<% if !userhash["profile_image_url"].blank? %>
 		<%= image_tag userhash["profile_image_url"] %>
 	<% end %>
