@@ -1,0 +1,12 @@
+<% userinfo=JSON.parse(@user.user_info) %>
+<% userhash=userinfo["user_hash"] %>
+
+
+
+<div class="githubbody">
+	<h2>Github</h2>
+
+	<% userhash.each do |i| %>
+		<p><%= i.to_s %></p>
+	<% end %>
+</div>

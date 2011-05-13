@@ -16,6 +16,10 @@
   <% if !ENV['FACEBOOK_APP_ID'].blank? %>
 	<%= link_to('Login With Facebook', '/auth/facebook') %>
   <% end %>
-  
+ 
+  <% if !ENV['GITHUB_CLIENT_ID'].blank? %>
+	<%= link_to('Login With Github', '/auth/github') %>
+  <% end %>
+ 
   </li>
 <% end %>

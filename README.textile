@@ -200,6 +200,13 @@ Rails.application.config.middleware.use OmniAuth::Builder do
 end
 </pre>
 
+For Github:
+
+<pre>
+Rails.application.config.middleware.use OmniAuth::Builder do
+  provider :facebook, 'GITHUB_CLIENT_ID', 'GITHUB_SECRET'
+end
+</pre>
 For others, see "Module: OmniAuth::Strategies":http://intridea.github.com/omniauth/OmniAuth/Strategies.html.
 
 h4. Keep Your API Keys Secret
