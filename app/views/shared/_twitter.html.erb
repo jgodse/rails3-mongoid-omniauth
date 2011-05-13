@@ -1,5 +1,8 @@
 <div >
 <h2>Twitter</h2>
+<% userinfo=JSON.parse(@user.user_info) %>
 
-<%= @user.user_info %>
+<% userinfo.each do |info| %>
+	<%= info.to_s %>
+<% end %>
 </div>
