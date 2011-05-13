@@ -1,7 +1,7 @@
 <% userinfo=JSON.parse(@user.user_info) %>
-<% userhash=userinfo["user_hash"]
+<% userhash=userinfo["user_hash"] %>
 
-	<style type="text/css">
+<style type="text/css">
 		.twitterbody {
 			background-color: <% userhash["profile_background_color"] || "white"%>
 			<% if userhash["profile_use_background_image"] %>
@@ -17,8 +17,8 @@
 		.twitterbody a:link {
 			color: :<%= userhash["profile_link_color"] || "blue" %>
 		}
-	</style>
-<% end %>
+</style>
+
 
 <div class="twitterbody">
 	<h2>Twitter</h2>
