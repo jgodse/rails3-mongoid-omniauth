@@ -2,5 +2,12 @@
 <p>Find me in app/views/users/show.html.erb</p>
 <p>User: <%= @user.name %></p>
 <p>Email: <%= @user.email if @user.email %></p>
+<p>Provider: <%= @user.provider %></p>
 <p>Info: <%= @user.user_info if @user.user_info %></p>
+
+<% if @user.provider="twitter" %>
+
+<%= render 'shared/twitter' %>
+
+<% end %>
 
