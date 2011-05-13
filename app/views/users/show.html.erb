@@ -2,10 +2,11 @@
 <p>Find me in app/views/users/show.html.erb</p>
 <p>User: <%= @user.name %></p>
 <p>Email: <%= @user.email if @user.email %></p>
-<p>Info: 
-<% if @user.user_info %>
-	<% @user.user_info.each do |info_element| %>
+<p>Info: <%= @user.user_info if @user.user_info %></p>
+
+<% #if @user.user_info %>
+	<% #@user.user_info.each do |info_element| %>
 		<h3> ELEMENT </h3>
-		<p><%= info_element.to_yaml if @user.user_info %></p>
-	<% end %>
-<% end %>
+		<p><%= #info_element if @user.user_info %></p>
+	<% #end %>
+<% #end %>
