@@ -178,7 +178,46 @@ You can check which gems are installed on your computer with:
 
 Keep in mind that you have installed these gems locally. When you deploy the app to another server, the same gems (and versions) must be available.
 
-h4. Set Up Configuration for OmniAuth
+h4. Get Application Credentials for OmniAuth
+
+h5. Twitter (dev.twitter.com)
+You must give them:
+ - Application Name: e.g. Jay's OAuth Example
+ - Application Web Site: e.g. http://jgodse-omniauth-mongoid.heroku.com
+ - Callback URL:  http://jgodse-omniauth-mongoid.heroku.com/
+
+ Make sure that you DO put a trailing slash on the callback URL or else it won't work. 
+  
+ 
+You will get back
+ - API key (or consumer key), which maps to the TWITTER_KEY environment variable in the app. 
+ - Consumer Secret, which maps to the TWITTER_SECRET environment variable in the app. 
+ 
+
+h5. Github
+You must give them: 
+ - Name:  e.g. Jay's Rails3 Mongoid OAuth
+ - URL: - e.g. http://jgodse-omniauth-mongoid.heroku.com
+ - Callback URL: - e.g. http://jgodse-omniauth-mongoid.heroku.com
+ 
+ Make sure that you DO NOT put a trailing slash on the callback URL or else it won't work. 
+
+You will get back
+ - Client ID,  which maps to the GITHUB_CLIENT_ID environment variable in the app. 
+ - Secret, which maps to the GITHUB_SECRET environment variable in the app. 
+ 
+h5. Facebook (www.facebook.com/developers)
+You must give them: 
+ - Name:  e.g. Jay's Rails3 Mongoid OAuth
+ - Site URL: - e.g. http://jgodse-omniauth-mongoid.heroku.com/
+ 
+ Putting in the trailing slash in the Site URL works.  
+
+You will get back
+ - App ID,  which maps to the FACEBOOK_APP_ID environment variable in the app. 
+ - App Secret, which maps to the FACEBOOK_APP_SECRET environment variable in the app.  
+ 
+h4. Set Up Application Configuration for OmniAuth
 
 This app uses OmniAuth for user management and authentication. OmniAuth is at "https://github.com/intridea/omniauth":https://github.com/intridea/omniauth.
 
