@@ -17,7 +17,7 @@
 	<p>Email: <%= userhash["email"] if userhash["email"] %></p>	
 	<p>Followers: <%= userhash["followers_count"] %></p>
 	<p>Public Repositories: <%= userhash["public_repo_count"] %></p>
-	<p>Blog: <%= link_to(userhash["blog"], link_to(userhash["blog"]) %></p>
+	<p>Blog: <%= link_to(userhash["blog"], userhash["blog"]) %></p>
 	<p>Location: <%= userhash["location"] if userhash["location"] %></p>
 	
 </div>
