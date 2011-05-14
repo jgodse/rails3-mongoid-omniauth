@@ -6,7 +6,19 @@
 <div class="githubbody">
 	<h2>Github</h2>
 
-	<% userhash.each do |i| %>
-		<p><%= i.to_s %></p>
+	<% if !userhash["gravatar_id"].blank? %>
+		<%= image_tag("https://secure.gravatar.com/avatar/"+userhash["gravatar_id"]) %>
 	<% end %>
+	
+	<p>Login: <%= userhash["login"] %></p>
+	<p>Name: <%= userhash["name"] %></p>
+	<p>Company: <%= userhash["company"] %></p>
+	<p>Account Created At: <%= userhash["created_at"] %></p>
+	<p>Email: <%= userhash["email"] if userhash["email"] %></p>	
+	<p>Followers: <%= userhash["followers_count"] %></p>
+	<p>Public Repositories: <%= userhash["public_repo_count"] %></p>
+	<p>Blog: <%= link_to(userhash["blog"], link_to(userhash["blog"]) %></p>
+	<p>Location: <%= userhash["location"] if userhash["location"] %></p>
+	
+	<p%>Time Zone: <%= userhash["time_zone"] if userhash["time_zone"] %></p>	
 </div>
