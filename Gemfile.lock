@@ -213,6 +213,7 @@ DEPENDENCIES
   launchy (>= 0.4.0)
   mongoid (>= 2.0.1)
   mongoid-rspec (>= 1.4.2)
+  oa-openid
   omniauth (>= 0.2.4)
   rails (= 3.0.7)
   rspec-rails (>= 2.5.0)
