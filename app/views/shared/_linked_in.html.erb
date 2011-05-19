@@ -5,8 +5,8 @@
 
 <div class="linked_inbody">
 	<h2>LinkedIn</h2>
-	<%= userinfo.inspect %>
-
-
+	<% userinfo.each do |infoe| %>
+		<p><%= infoe.inspect %></p><br />
+	<% end %>
 	
 </div>
