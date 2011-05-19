@@ -3,12 +3,13 @@
 <div class="linked_inbody">
 	<h2>LinkedIn</h2>
 
-	<% if userinfo["image"].blank? %>
+	<% if !userinfo["image"].blank? %>
 		<%= image_tag userinfo["image"] %>
 	<% end %>
 	
 	<p>Nickname: <%= userinfo["nickname"] %></p>
 	<p>Name: <%= userinfo["name"] %></p>
+	<p>Description</p><%= userinfo["description"] %></p>
 	<p>Location: <%= userinfo["location"] if userinfo["location"] %></p>
 	
 	<p>Web sites</p>
