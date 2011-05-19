@@ -14,12 +14,15 @@
   <% end %>
   
   <% if !ENV['FACEBOOK_APP_ID'].blank? %>
-	<%= link_to('Login With Facebook', '/auth/facebook') %>
+	<%= link_to('Login With Facebook', '/auth/facebook') %> |
   <% end %>
  
   <% if !ENV['GITHUB_CLIENT_ID'].blank? %>
-	<%= link_to('Login With Github', '/auth/github') %>
+	<%= link_to('Login With Github', '/auth/github') %> |
   <% end %>
- 
+  
+  <% if !ENV['LINKED_IN_API_KEY'].blank? %>
+	<%= link_to('Login With LinkedIn', '/auth/linked_in') %> |
+  <% end %>
   </li>
 <% end %>

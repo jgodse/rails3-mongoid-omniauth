@@ -10,3 +10,4 @@ gem "launchy", ">= 0.4.0", :group => :test
 gem "bson_ext", ">= 1.3.0"
 gem "mongoid", ">= 2.0.1"
 gem "omniauth", ">= 0.2.4"
+gem "oa-openid"

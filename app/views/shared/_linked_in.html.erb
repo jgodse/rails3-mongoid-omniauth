@@ -1,0 +1,14 @@
+<% userinfo=JSON.parse(@user.user_info) %>
+<% userhash=userinfo["user_hash"] %>
+
+
+
+<div class="linked_inbody">
+	<h2>LinkedIn</h2>
+	<% userhash.each do |e| %>
+		<p> <%= e.to_s %></p>
+	
+	<% end %>
+
+	
+</div>
