@@ -3,7 +3,6 @@
 <div class="googlebody">
 	<h2>Google</h2>
 
-	<% userinfo.each do |u| %>
-		<p><%= userinfo.inspect %></p><br />
-	<% end %>
+	<p>Name: <%= userinfo["name"] %></p>
+	<p>email: <%= userinfo["email"] %></p>
 </div>
