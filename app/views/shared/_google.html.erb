@@ -1,0 +1,9 @@
+<% userinfo=JSON.parse(@user.user_info) %>
+
+<div class="googlebody">
+	<h2>Google</h2>
+
+	<% userinfo.each do |u| %>
+		<p><%= userinfo.inspect %></p><br />
+	<% end %>
+</div>

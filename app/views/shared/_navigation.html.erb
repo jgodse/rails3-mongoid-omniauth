@@ -24,5 +24,8 @@
   <% if !ENV['LINKED_IN_API_KEY'].blank? %>
 	<%= link_to('Login With LinkedIn', '/auth/linked_in') %> |
   <% end %>
+  
+  <%= link_to('Login With Google ', '/auth/google') %> |
+
   </li>
 <% end %>
