@@ -1,5 +1,5 @@
-#require 'openid/store/filesystem'
-#  use OmniAuth::Strategies::OpenID, OpenID::Store::Filesystem.new('/tmp'), :name=> "google", :identifier => 'https://www.google.com/accounts/o8/id'
+require 'openid/store/filesystem'
+#use OmniAuth::Strategies::OpenID, OpenID::Store::Filesystem.new('/tmp'), :name=> "google", :identifier => 'https://www.google.com/accounts/o8/id'
 
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :twitter, ENV['TWITTER_KEY'], ENV['TWITTER_SECRET']
