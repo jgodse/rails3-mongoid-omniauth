@@ -6,8 +6,8 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   provider :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET']
   provider :github, ENV['GITHUB_CLIENT_ID'], ENV['GITHUB_SECRET']
   provider :linked_in, ENV['LINKED_IN_API_KEY'], ENV['LINKED_IN_SECRET_KEY']
-  provider :open_id, OpenID::Store::Filesystem.new('/tmp'), {:name => "google", :domain => "https://www.google.com/accounts/o8/id" }
-  provider :open_id, OpenID::Store::Filesystem.new('/tmp'), {:name => "yahoo", :domain => "https://me.yahoo.com"}
+  provider :open_id, OpenID::Store::Filesystem.new('/tmp'), {:name => "google", :identifier => "https://www.google.com/accounts/o8/id" }
+  provider :open_id, OpenID::Store::Filesystem.new('/tmp'), {:name => "yahoo", :identifier => "https://me.yahoo.com"}
   
 #  provider :open_id, OpenID::Store::Filesystem.new('./tmp')
   
