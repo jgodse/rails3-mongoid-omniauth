@@ -25,7 +25,7 @@ class User
         end
       end
     rescue Exception
-      raise Exception, "cannot create user record" + user.inspect
+      raise Exception, "cannot create user record" + auth.inspect
     end
   end
 
