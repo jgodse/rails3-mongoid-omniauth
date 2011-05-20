@@ -19,12 +19,13 @@ class User
 	  user.email = auth['user_info']['email'] if auth['user_info']['email'] # Google, Yahoo, GitHub
 	  user.user_info = auth['user_info'].to_json#
     end
-	if auth['extra']['user_hash']
-	  user.name = auth['extra']['user_hash']['name'] if auth['extra']['user_hash']['name'] # Facebook
-	  user.email = auth['extra']['user_hash']['email'] if auth['extra']['user_hash']['email'] # Facebook
-	  user.user_info = auth['extra'].to_json
+	if auth['extra']
+		if auth['extra']['user_hash']
+		  user.name = auth['extra']['user_hash']['name'] if auth['extra']['user_hash']['name'] # Facebook
+		  user.email = auth['extra']['user_hash']['email'] if auth['extra']['user_hash']['email'] # Facebook
+		  user.user_info = auth['extra'].to_json
+		end
 	end
-	
 	if !user.save
 		raise Exception, "cannot create user record: " + user.errors.inspect
 	end
