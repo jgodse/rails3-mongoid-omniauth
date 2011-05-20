@@ -9,7 +9,7 @@ class User
   attr_accessible :provider, :uid, :name, :email, :user_info
 
   def self.create_with_omniauth(auth)
-	raise Exception, auth.inspect
+	#raise Exception, auth.inspect
     begin
       create! do |user|
         user.provider = auth['provider']
