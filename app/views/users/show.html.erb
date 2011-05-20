@@ -25,6 +25,10 @@
 	<%= render 'shared/google' %>
 <% end %>
 
+<% if @user.provider=="yahoo" %>
+	<%= render 'shared/yahoo' %>
+<% end %>
+
 <p>For the raw user_info, look at the page source below this line</p>
 <div style="display:none">
 <%= @user.user_info if @user.user_info %>

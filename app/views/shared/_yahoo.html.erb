@@ -1,0 +1,11 @@
+<% userinfo=JSON.parse(@user.user_info) %>
+
+<div class="yahoobody">
+	<h2>Yahoo</h2>
+	
+	<% userinfo.each do |u| %>
+		<p><%= u.inspect %></p><br />
+	<% end %>
+
+
+</div>
